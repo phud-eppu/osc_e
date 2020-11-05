@@ -19,7 +19,6 @@ def default_handler(address, *argv):
 
 dispatcher = Dispatcher() 
 dispatcher.map("/nxosc/xyz", default_handler)
-""""dispatcher.set_default_handler(default_handler)"""
 
 ip_in = "127.0.0.1"
 port_in = 8000
