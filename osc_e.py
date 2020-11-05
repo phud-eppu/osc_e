@@ -14,8 +14,8 @@ client = SimpleUDPClient(ip_out, port_out)  # Create client
 
 def default_handler(address, *argv): 
     client.send_message("/SceneRotator/yaw", -argv[1])    # print("x: ", argv[0])
-    client.send_message("/SceneRotator/pitch", -argv[2])    # print("y: ", argv[1])
-    client.send_message("/SceneRotator/roll", -argv[0])    # print("z: ", argv[2])
+    client.send_message("/SceneRotator/pitch", -argv[0])    # print("y: ", argv[1])
+    client.send_message("/SceneRotator/roll", argv[2])    # print("z: ", argv[2])
 
 dispatcher = Dispatcher() 
 dispatcher.map("/nxosc/xyz", default_handler)
